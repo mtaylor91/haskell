@@ -1,8 +1,17 @@
-resolver: lts-14.7
-extra-deps:
-- jsonpath-0.1.0.1
-- jwt-0.10.0
-- oidc-client-0.4.0.0
+resolver: lts-15.14
 packages:
 - kubernetes
 - kubernetes-client
+extra-deps:
+- Cabal-3.2.0.0
+- directory-1.3.6.1
+- oidc-client-0.5.1.0
+- process-1.6.9.0
+- time-1.10
+- unix-2.7.2.2
+- git: https://github.com/mtaylor91/timerep.git
+  commit: 54a9a65eb8ddd9486638efb383db7749c81d9122
+nix:
+  enable: false
+docker:
+  enable: true
